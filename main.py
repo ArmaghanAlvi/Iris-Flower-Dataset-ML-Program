@@ -119,6 +119,7 @@ models.append(('NB', GaussianNB())) #Gaussian Naive Bayes classifier - based on 
 models.append(('SVM', SVC(gamma = 'auto'))) #Support Vector Classifier
 
 #Evaluate each model
+print('\n\n\nModel Evaluation:')
 results = []
 names = []
 for name, model in models:
@@ -128,4 +129,27 @@ for name, model in models:
     cv_results = cross_val_score(model, X_train, Y_train, cv = kfold, scoring = 'accuracy') #cv = kfold means the cross validation strategy is k-fold ; the scoring is based on accuracy, as stated earlier
     results.append(cv_results) #add to results list
     names.append(name) #The first element ("name") of the tuples we made for models
-    print('\n\n%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
+    print('\n%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
+
+#Let's compare results with box and whisker plots
+pyplot.boxplot(results, labels = names)
+pyplot.title('Algorithm Comparison')
+pyplot.show()
+
+
+#Based on evaluation, SVM seems to be the best algorithm
+#Lets test it against the validation set we made at the beginning
+    #This provides an independent final check on its accuracy
+    #It is valuable to keep a separate validation set just in case any mistakes were made in training
+
+#Make predictions with the training dataset
+model = SVC(gamma = 'auto')
+model.fit(X_train, Y_train) #Applies the training set to teach the model
+predictions = model.predict(X_validation) #uses our model to make predictions for the unseen data provided by the X_validation set
+
+#Now that we had our model make its predictions, lets evaluate them
+print('\n\n\nEvaluating the model:')
+print("Accuracy score:", accuracy_score(Y_validation, predictions)) #calculates the percentage of correct predictions
+print("\nConfusion matrix:", confusion_matrix(Y_validation, predictions)) #Creates a table that compares actual to predicted (True (correct) and False (incorrect) positives and negatives)
+print("\nClassification report:\n", classification_report(Y_validation, predictions)) #generates report on model's performance
+
