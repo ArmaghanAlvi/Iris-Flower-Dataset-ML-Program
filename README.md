@@ -2,6 +2,8 @@
   <h1 align="center">Iris-Flower-Dataset-ML-Program</h1>
 </div>
 
+A simple program that manipulates the Iris Dataset to learn the most basic concepts of Machine Learning in Python.
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -27,6 +29,9 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
+
+
+##About
 
 
 
