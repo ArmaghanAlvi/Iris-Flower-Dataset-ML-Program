@@ -43,6 +43,6 @@ Considering the fact that the entire goal of this project was to learn, there is
 
 
 ## Acknowledgements
-This project was made based on <a href="https://machinelearningmastery.com/machine-learning-in-python-step-by-step/">this</a> tutorial by Jason Brownlee.
+This project was made based on <a href="https://machinelearningmastery.com/machine-learning-in-python-step-by-step/">this</a> post by Jason Brownlee.
 
 
