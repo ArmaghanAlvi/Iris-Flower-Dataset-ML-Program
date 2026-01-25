@@ -19,9 +19,9 @@ The main focuses were to learn how to load and examine data, test various differ
 The `final_model` file simply runs the most effective model that was determined in the `main` file.
 
 ### Built with
-Language used: Python  
+**Language used:** Python  
 
-Python libraries:
+**Python libraries:**
 * scipy
 * numpy
 * matplotlib
