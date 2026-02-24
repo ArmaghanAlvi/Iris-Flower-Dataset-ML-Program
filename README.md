@@ -20,7 +20,7 @@ The purpose of this project was to expose myself to basic machine learning conce
 The main focuses were to learn how to load and examine data, test various different ML classification algorithms and determine the most effective, and finally, make some predictions for unseen data based on the algorithm deemed most effective on the data set. For the evaluation of the algorithms, the program uses stratified 10-fold cross validation.
 The `final_model` file simply runs the most effective model that was determined in the `main` file.
 
-### Built with
+### Built with:
 **Language used:** Python  
 
 **Python libraries:**
