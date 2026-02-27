@@ -24,11 +24,11 @@ The `final_model` file simply runs the most effective model that was determined 
 **Language used:** Python  
 
 **Python libraries:**
-* scipy
-* numpy
-* matplotlib
-* pandas
-* sci-kit learn
+* `scipy`
+* `numpy`
+* `matplotlib`
+* `pandas`
+* `sci-kit learn`
 
 
 ## Lessons
